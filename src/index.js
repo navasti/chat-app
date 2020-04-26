@@ -1,17 +1,36 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import Login from './components/login';
+import Signup from './components/signup';
+import Dashboard from './components/dashboard';
+import { Route, BrowserRouter as Router } from 'react-router-dom';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+import firebase from 'firebase';
+import "firebase/firestore";
+
+firebase.initializeApp({
+  apiKey: "AIzaSyAlbA4z639hZq7k0Naihjw9NQSscAVJa0Y",
+  authDomain: "chat-app-ea5f5.firebaseapp.com",
+  databaseURL: "https://chat-app-ea5f5.firebaseio.com",
+  projectId: "chat-app-ea5f5",
+  storageBucket: "chat-app-ea5f5.appspot.com",
+  messagingSenderId: "541063418900",
+  appId: "1:541063418900:web:a4c8d16985fa5a80080301",
+  measurementId: "G-JXXQMTKR47"
+});
+
+const routing = (
+  <Router>
+    <div className="app">
+      Hello
+      <Route path="/login" component={Login}/>
+      <Route path="/signup" component={Signup}/>
+      <Route path="/dasboard" component={Dashboard}/>
+    </div>
+  </Router>
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(
+  <React.StrictMode>{routing}</React.StrictMode>, document.getElementById('root')
+);
