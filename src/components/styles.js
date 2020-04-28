@@ -27,7 +27,9 @@ const useStyles = makeStyles((theme) => ({
       marginTop: theme.spacing(3),
     },
     noAccountHeader: {
-      width: '100%'
+      width: '100%',
+      margin: '5px 0',
+      textAlign: 'center'
     },
     signUpLink: {
       width: '100%',
@@ -39,10 +41,7 @@ const useStyles = makeStyles((theme) => ({
     errorText: {
       color: 'red',
       textAlign: 'center'
-    },
-    marginY: {
-      margin: '5px 0',
-    },
+    }
 }));
   
 export default useStyles;
