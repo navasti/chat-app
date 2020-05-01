@@ -14,15 +14,13 @@ import {
 // import { NotificationImportant } from '@material-ui/icons'
 
 const ChatList = (props) => {
+    // styles
     const classes = useStyles();
-
+    // state setters
     const newChat = () => {
         console.log('new chat')
     }
-    
-    const selectChat = (index) => {
-        console.log('selected chat', index)
-    }
+    const selectChat = (index) => props.selectChatFn(index);
 
     if(props.chats.length > 0){
         return(
