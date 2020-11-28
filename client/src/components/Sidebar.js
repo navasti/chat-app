@@ -18,6 +18,7 @@ const Sidebar = ({ id }) => {
   const closeModal = () => {
     setModalOpen(false);
   };
+
   return (
     <div style={{ width: "250px" }} className="d-flex flex-column">
       <Tab.Container activeKey={activeKey} onSelect={setActiveKey}>

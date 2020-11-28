@@ -27,6 +27,7 @@ const NewConverastionModal = ({ closeModal }) => {
     createConversation(selectedContactIds);
     closeModal();
   };
+
   return (
     <>
       <Modal.Header closeButton>CreateContact</Modal.Header>

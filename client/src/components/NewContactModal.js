@@ -14,6 +14,7 @@ const NewContactModal = ({ closeModal }) => {
     createContact(idRef.current.value, nameRef.current.value);
     closeModal();
   };
+
   return (
     <>
       <Modal.Header closeButton>CreateContact</Modal.Header>

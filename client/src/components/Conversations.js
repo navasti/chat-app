@@ -6,6 +6,7 @@ import { useConversations } from "../context/ConversationsProvider";
 
 const Conversations = () => {
   const { conversations, selectedConversationIndex } = useConversations();
+
   return (
     <ListGroup variant="flush">
       {conversations.map((conversation, index) => (

@@ -16,11 +16,12 @@ const App = () => {
 
   const dashboard = (
     <ContactsProvider>
-      <ConversationsProvider>
+      <ConversationsProvider id={id}>
         <Dashboard id={id} />
       </ConversationsProvider>
     </ContactsProvider>
   );
+
   return id ? dashboard : <Login onIdSubmit={setId} />;
 };
 
