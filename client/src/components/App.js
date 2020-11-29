@@ -10,16 +10,19 @@ import Dashboard from "./Dashboard";
 // Context
 import { ContactsProvider } from "../context/ContactsProvider";
 import { ConversationsProvider } from "../context/ConversationsProvider";
+import { SocketProvider } from "../context/SocketProvider";
 
 const App = () => {
   const [id, setId] = useLocalStorage("id");
 
   const dashboard = (
-    <ContactsProvider>
-      <ConversationsProvider id={id}>
-        <Dashboard id={id} />
-      </ConversationsProvider>
-    </ContactsProvider>
+    <SocketProvider id={id}>
+      <ContactsProvider>
+        <ConversationsProvider id={id}>
+          <Dashboard id={id} />
+        </ConversationsProvider>
+      </ContactsProvider>
+    </SocketProvider>
   );
 
   return id ? dashboard : <Login onIdSubmit={setId} />;

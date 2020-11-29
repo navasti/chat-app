@@ -33,8 +33,10 @@ const OpenConversation = () => {
               <div
                 key={index}
                 ref={lastMessage ? setRef : null}
-                className={`my-1 d-flex flex-column ${
-                  message.fromMe ? "align-self-end" : ""
+                className={`my-1 lead d-flex flex-column ${
+                  message.fromMe
+                    ? "align-self-end align-items-end"
+                    : "align-items-start"
                 }`}
               >
                 <div
@@ -49,7 +51,7 @@ const OpenConversation = () => {
                     message.fromMe ? "text-right" : ""
                   }`}
                 >
-                  {message.fromMe ? "You" : message.sender.name}
+                  {message.fromMe ? "You" : message.senderName}
                 </div>
               </div>
             );
