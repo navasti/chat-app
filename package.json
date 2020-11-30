@@ -1,0 +1,25 @@
+{
+  "name": "chat-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "devStart": "concurrently \" cd server && npm run dev \" \" cd client && npm start \"",
+    "clientDependencies": "cd client && npm install",
+    "serverDependencies": "cd server && npm install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/navasti/chat-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/navasti/chat-app/issues"
+  },
+  "homepage": "https://github.com/navasti/chat-app#readme",
+  "dependencies": {
+    "concurrently": "^5.3.0"
+  }
+}
